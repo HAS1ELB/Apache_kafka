@@ -319,14 +319,14 @@ while True:
     if msg.error():
         print(f"Consumer error: {msg.error()}")
         continue
-    
+  
     # Process the message
     data = json.loads(msg.value().decode('utf-8'))
     processed_data = {
         'original_value': data['value'],
         'doubled_value': data['value'] * 2
     }
-    
+  
     # Produce the processed result
     producer.produce('output_topic', json.dumps(processed_data).encode('utf-8'))
     producer.flush()
@@ -350,7 +350,7 @@ class PythonSourceConnector:
         while True:
             # Fetch data from your source system
             data = self.fetch_data()
-            
+          
             # Send data to Kafka
             self.producer.produce(self.topic, json.dumps(data).encode('utf-8'))
             self.producer.flush()
@@ -379,5 +379,3 @@ For more in-depth information on Apache Kafka and its usage with Python, conside
 5. Kafka Summit conference recordings: [https://www.confluent.io/resources/kafka-summit-recordings/](https://www.confluent.io/resources/kafka-summit-recordings/)
 
 Remember to verify these resources and their availability, as they may change over time.
-
-
