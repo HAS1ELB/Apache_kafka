@@ -1,0 +1,1 @@
+kafka-broker-api-versions.sh --bootstrap-server <broker_address>

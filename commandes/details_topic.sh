@@ -1,0 +1,1 @@
+kafka-topics.sh --describe --topic <topic_name> --bootstrap-server <broker_address>

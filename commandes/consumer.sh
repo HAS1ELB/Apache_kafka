@@ -1,0 +1,1 @@
+kafka-console-consumer.sh --topic <topic_name> --bootstrap-server <broker_address> --from-beginning

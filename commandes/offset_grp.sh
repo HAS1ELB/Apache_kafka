@@ -1,0 +1,1 @@
+kafka-consumer-groups.sh --describe --group <group_name> --bootstrap-server <broker_address>
